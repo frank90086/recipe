@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="甜玉米插畫">
+  <defs>
+    <filter id="r" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="g" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="3" result="t"/>
+      <feColorMatrix in="t" type="saturate" values="0" result="d"/>
+      <feComponentTransfer in="d" result="a"><feFuncA type="table" tableValues="0 0.5"/></feComponentTransfer>
+      <feComposite in="a" in2="SourceGraphic" operator="in"/>
+    </filter>
+    <pattern id="k" width="17" height="17" patternUnits="userSpaceOnUse">
+      <rect width="17" height="17" fill="#E9A93A"/>
+      <ellipse cx="4.5" cy="4.5" rx="5.6" ry="5" fill="#F9D978"/>
+      <ellipse cx="13" cy="13" rx="5.6" ry="5" fill="#F9D978"/>
+      <ellipse cx="21.5" cy="4.5" rx="5.6" ry="5" fill="#F9D978"/>
+      <ellipse cx="-4" cy="13" rx="5.6" ry="5" fill="#F9D978"/>
+      <ellipse cx="4.5" cy="21.5" rx="5.6" ry="5" fill="#F9D978"/>
+      <ellipse cx="13" cy="-4" rx="5.6" ry="5" fill="#F9D978"/>
+    </pattern>
+    <clipPath id="cob">
+      <path d="M62 26 C76 18 94 24 100 42 C108 66 108 104 98 126 C92 140 74 144 64 132 C52 118 50 56 62 26 Z"/>
+    </clipPath>
+  </defs>
+  <g filter="url(#r)">
+    <path d="M44 48 C30 60 24 92 34 120 C40 136 54 142 60 136 C50 118 46 80 50 54 Z" fill="#9BB264"/>
+    <path d="M44 48 C30 60 24 92 34 120 C40 136 54 142 60 136 C50 118 46 80 50 54 Z" fill="none" stroke="#6F8B45" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M46 54 C42 80 44 110 54 132" stroke="#C3D394" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M110 44 C126 54 132 88 124 116 C118 134 104 140 98 134 C108 116 114 76 110 44 Z" fill="#8FA85B"/>
+    <path d="M110 44 C126 54 132 88 124 116 C118 134 104 140 98 134 C108 116 114 76 110 44 Z" fill="none" stroke="#6F8B45" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M62 26 C76 18 94 24 100 42 C108 66 108 104 98 126 C92 140 74 144 64 132 C52 118 50 56 62 26 Z" fill="url(#k)"/>
+    <g clip-path="url(#cob)">
+      <path d="M92 28 C104 56 104 110 92 140 L112 140 L112 24 Z" fill="#C98A2A" opacity=".45"/>
+      <path d="M62 26 C58 56 58 104 66 132 L52 130 L50 30 Z" fill="#FFF0B8" opacity=".35"/>
+    </g>
+    <path d="M62 26 C76 18 94 24 100 42 C108 66 108 104 98 126 C92 140 74 144 64 132 C52 118 50 56 62 26 Z" fill="none" stroke="#BE801F" stroke-width="2.8" stroke-linejoin="round"/>
+    <g stroke="#CDA44A" stroke-width="2.4" stroke-linecap="round" fill="none" opacity=".55">
+      <path d="M72 20 C80 12 90 10 96 14"/>
+    </g>
+  </g>
+  <g filter="url(#g)" style="mix-blend-mode:multiply" opacity=".45">
+    <path d="M62 26 C76 18 94 24 100 42 C108 66 108 104 98 126 C92 140 74 144 64 132 C52 118 50 56 62 26 Z" fill="#9c6b14"/>
+    <path d="M44 48 C30 60 24 92 34 120 C40 136 54 142 60 136 C50 118 46 80 50 54 Z M110 44 C126 54 132 88 124 116 C118 134 104 140 98 134 C108 116 114 76 110 44 Z" fill="#4e6a2c"/>
+  </g>
+</svg>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>暖食手記｜用蠟筆插畫記錄的家常食譜</title>
+<meta name="description" content="用蠟筆插畫記錄的家常食譜：可依人數自動換算食材、每個步驟都有倒數計時器。">
+<meta name="theme-color" content="#EDE0CF">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-mark"><img src="assets/img/favicon.svg" alt=""></span>
+    <span><b>暖食手記</b><small>WARM KITCHEN NOTES</small></span>
+  </a>
+  <div class="topbar-actions">
+    <button type="button" class="nm-btn icon" id="themeToggle" aria-label="切換深色模式">☾</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div>
+      <h1>慢慢燉，<br>把家裡的味道記下來</h1>
+      <p>每一道都是自己煮過、記過的筆記。可以依人數自動換算食材，每個需要等的步驟都附上倒數計時器——手上忙著切菜時，就讓網站幫你看時間。</p>
+      <div class="hero-tags">
+        <span class="pill">🖍 蠟筆插畫</span>
+        <span class="pill">⏲ 步驟計時器</span>
+        <span class="pill">👥 人數換算</span>
+        <span class="pill">🔍 食材搜尋</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/img/dish-daikon-corn-pork-rib-soup.svg" alt="蘿蔔玉米排骨湯成品插畫">
+    </div>
+  </section>
+
+  <h2 class="section-title">食譜總覽</h2>
+
+  <section class="toolbar">
+    <div class="search-box">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/>
+      </svg>
+      <input type="search" id="q" placeholder="搜尋食譜、食材或標籤…（按 / 快速搜尋）" aria-label="搜尋食譜">
+    </div>
+    <div class="chips" id="tagChips" role="group" aria-label="標籤篩選">
+      <span class="label">標籤</span>
+    </div>
+  </section>
+
+  <p class="result-count" id="count"></p>
+  <section class="grid" id="grid" aria-live="polite"></section>
+
+  <div class="empty" id="empty" hidden>
+    <strong>找不到符合的食譜</strong>
+    換個關鍵字，或是取消幾個標籤試試。
+    <div style="margin-top:1.2rem"><button type="button" class="nm-btn" id="clearFilters">清除所有條件</button></div>
+  </div>
+
+</main>
+
+<footer class="site-foot">
+  暖食手記 · 自家廚房的筆記 · 插畫與版面皆為手繪 SVG
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/index.js"></script>
+</body>
+</html>

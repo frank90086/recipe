@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="豬背骨插畫">
+  <defs>
+    <filter id="r" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="23" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="g" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="9" result="t"/>
+      <feColorMatrix in="t" type="saturate" values="0" result="d"/>
+      <feComponentTransfer in="d" result="a"><feFuncA type="table" tableValues="0 0.5"/></feComponentTransfer>
+      <feComposite in="a" in2="SourceGraphic" operator="in"/>
+    </filter>
+    <clipPath id="c1"><path d="M40 62 C38 44 52 32 72 32 C94 32 112 42 120 58 C128 74 124 96 108 108 C92 120 66 120 52 108 C40 98 42 78 40 62 Z"/></clipPath>
+  </defs>
+  <g filter="url(#r)">
+    <path d="M40 62 C38 44 52 32 72 32 C94 32 112 42 120 58 C128 74 124 96 108 108 C92 120 66 120 52 108 C40 98 42 78 40 62 Z" fill="#E3998F"/>
+    <g clip-path="url(#c1)">
+      <path d="M52 100 C70 116 100 114 116 100 C126 90 128 76 124 64 C122 86 112 100 92 106 C76 111 62 108 52 100 Z" fill="#CE7C74"/>
+      <path d="M46 52 C56 38 78 34 96 40 C86 42 70 46 60 56 Z" fill="#EFB4AB"/>
+      <g stroke="#F6D5CE" stroke-width="3" stroke-linecap="round" fill="none" opacity=".75">
+        <path d="M54 72 C64 66 76 66 86 70"/>
+        <path d="M58 86 C68 80 82 80 92 84"/>
+        <path d="M96 56 C104 60 110 68 112 76"/>
+      </g>
+    </g>
+    <path d="M40 62 C38 44 52 32 72 32 C94 32 112 42 120 58 C128 74 124 96 108 108 C92 120 66 120 52 108 C40 98 42 78 40 62 Z" fill="none" stroke="#B2665E" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M70 48 C58 48 52 56 54 66 C56 76 66 82 78 80 C92 78 100 70 98 58 C96 48 84 46 70 48 Z" fill="#F7F1E2" stroke="#C9BDA2" stroke-width="2.4"/>
+    <ellipse cx="76" cy="63" rx="12" ry="9" fill="#E7D7BC"/>
+    <ellipse cx="74" cy="62" rx="6" ry="4.5" fill="#D9BFA0"/>
+    <path d="M102 92 C94 86 84 86 78 92 C72 98 76 108 86 110 C98 112 108 104 106 96 Z" fill="#F4EDDD" stroke="#C9BDA2" stroke-width="2.2"/>
+    <ellipse cx="91" cy="99" rx="8" ry="6" fill="#E5D4B8"/>
+  </g>
+  <g filter="url(#g)" style="mix-blend-mode:multiply" opacity=".45">
+    <path d="M40 62 C38 44 52 32 72 32 C94 32 112 42 120 58 C128 74 124 96 108 108 C92 120 66 120 52 108 C40 98 42 78 40 62 Z" fill="#8c5a54"/>
+  </g>
+</svg>

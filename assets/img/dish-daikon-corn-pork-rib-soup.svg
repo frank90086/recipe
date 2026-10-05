@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540" role="img" aria-label="蘿蔔玉米排骨湯成品插畫：一碗清甜湯頭，裡面有蘿蔔塊、玉米、娃娃菜、紅棗與枸杞">
+  <defs>
+    <filter id="rough" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="4" seed="17" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="roughS" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="43" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="grain" x="-15%" y="-15%" width="130%" height="130%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="4" seed="9" result="t"/>
+      <feColorMatrix in="t" type="saturate" values="0" result="d"/>
+      <feComponentTransfer in="d" result="a"><feFuncA type="table" tableValues="0 0.42"/></feComponentTransfer>
+      <feComposite in="a" in2="SourceGraphic" operator="in"/>
+    </filter>
+    <radialGradient id="wash" cx="50%" cy="46%" r="58%">
+      <stop offset="0%" stop-color="#FFF3DF" stop-opacity=".95"/>
+      <stop offset="100%" stop-color="#FFF3DF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="kern" width="19" height="19" patternUnits="userSpaceOnUse">
+      <rect width="19" height="19" fill="#E5A434"/>
+      <ellipse cx="5" cy="5" rx="6.2" ry="5.6" fill="#F9D878"/>
+      <ellipse cx="14.5" cy="14.5" rx="6.2" ry="5.6" fill="#F9D878"/>
+      <ellipse cx="24" cy="5" rx="6.2" ry="5.6" fill="#F9D878"/>
+      <ellipse cx="-4.5" cy="14.5" rx="6.2" ry="5.6" fill="#F9D878"/>
+      <ellipse cx="5" cy="24" rx="6.2" ry="5.6" fill="#F9D878"/>
+      <ellipse cx="14.5" cy="-4.5" rx="6.2" ry="5.6" fill="#F9D878"/>
+    </pattern>
+    <clipPath id="broth"><ellipse cx="400" cy="252" rx="236" ry="74"/></clipPath>
+    <clipPath id="bowlBody"><path d="M164 250 C170 364 250 456 400 456 C550 456 630 364 636 250 Z"/></clipPath>
+    <g id="goji">
+      <path d="M0 -13 C5 -13 8 -8 8 0 C8 9 4 13 0 13 C-4 13 -8 9 -8 0 C-8 -8 -5 -13 0 -13 Z" fill="#DE5A2A"/>
+      <path d="M4 -11 C7 -6 7 7 3 12 C6 10 8 6 8 0 C8 -6 7 -9 4 -11 Z" fill="#B23F18"/>
+      <path d="M0 -13 C5 -13 8 -8 8 0 C8 9 4 13 0 13 C-4 13 -8 9 -8 0 C-8 -8 -5 -13 0 -13 Z" fill="none" stroke="#9A3412" stroke-width="1.8"/>
+    </g>
+  </defs>
+
+  <ellipse cx="400" cy="262" rx="396" ry="258" fill="url(#wash)"/>
+
+  <g filter="url(#roughS)">
+    <ellipse cx="400" cy="462" rx="280" ry="38" fill="#E2C9AC" opacity=".55"/>
+    <ellipse cx="400" cy="458" rx="212" ry="26" fill="#D6B894" opacity=".5"/>
+  </g>
+
+  <!-- steam -->
+  <g filter="url(#roughS)" opacity=".6" fill="none" stroke="#C9A98C" stroke-width="7" stroke-linecap="round">
+    <path d="M286 170 C310 136 268 118 294 82 C306 64 300 50 288 40"/>
+    <path d="M400 150 C426 112 384 92 412 54 C424 36 418 22 406 12"/>
+    <path d="M512 172 C536 138 496 120 522 84 C534 66 528 52 516 42"/>
+  </g>
+
+  <!-- bowl -->
+  <g filter="url(#rough)">
+    <path d="M164 250 C170 364 250 456 400 456 C550 456 630 364 636 250 Z" fill="#F7EFE2"/>
+    <g clip-path="url(#bowlBody)">
+      <path d="M470 250 C466 352 430 430 372 456 L636 456 L636 244 Z" fill="#E7DAC6"/>
+      <path d="M196 256 C204 344 248 414 304 444 C244 428 188 362 180 256 Z" fill="#FFFBF2"/>
+      <path d="M176 276 C256 318 548 318 628 276 C626 290 624 300 622 308 C520 352 282 352 180 308 C178 298 176 288 176 276 Z" fill="#E9D6B8" opacity=".7"/>
+      <g stroke="#C98B63" stroke-width="7" stroke-linecap="round" fill="none" opacity=".55">
+        <path d="M250 392 C300 420 350 430 400 430 C450 430 500 420 550 392"/>
+      </g>
+    </g>
+    <path d="M164 250 C170 364 250 456 400 456 C550 456 630 364 636 250 Z" fill="none" stroke="#BCA183" stroke-width="5" stroke-linejoin="round"/>
+    <ellipse cx="400" cy="250" rx="236" ry="74" fill="#F2E7D6" stroke="#BCA183" stroke-width="5"/>
+    <ellipse cx="400" cy="252" rx="222" ry="66" fill="#E0B66B"/>
+    <g clip-path="url(#broth)">
+      <ellipse cx="400" cy="252" rx="222" ry="66" fill="#E8C078"/>
+      <path d="M178 252 C260 296 540 296 622 252 L622 320 L178 320 Z" fill="#D2A253"/>
+      <g stroke="#F6DFA8" stroke-width="6" stroke-linecap="round" fill="none" opacity=".75">
+        <path d="M226 236 C256 222 292 220 322 230"/>
+        <path d="M486 286 C516 274 552 274 578 284"/>
+      </g>
+      <g fill="#C98F3C" opacity=".5">
+        <ellipse cx="268" cy="286" rx="16" ry="6"/>
+        <ellipse cx="520" cy="222" rx="20" ry="7"/>
+        <ellipse cx="420" cy="296" rx="14" ry="5"/>
+      </g>
+      <g fill="#FBE9BE" opacity=".55">
+        <circle cx="330" cy="206" r="6"/><circle cx="356" cy="214" r="4"/>
+        <circle cx="470" cy="204" r="5"/><circle cx="246" cy="258" r="5"/>
+        <circle cx="566" cy="252" r="5"/><circle cx="390" cy="306" r="4.5"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ingredients in the soup -->
+  <g filter="url(#roughS)">
+    <!-- baby cabbage leaf, left -->
+    <path d="M196 244 C208 214 240 202 262 214 C278 224 274 250 258 262 C240 274 208 268 196 244 Z" fill="#EDEFC4"/>
+    <path d="M252 218 C266 230 262 252 246 262 C258 262 274 250 272 232 C270 222 262 217 252 218 Z" fill="#D7DCA6"/>
+    <path d="M206 240 C226 234 248 232 266 236" stroke="#C3CB8E" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M196 244 C208 214 240 202 262 214 C278 224 274 250 258 262 C240 274 208 268 196 244 Z" fill="none" stroke="#A9B277" stroke-width="3.6" stroke-linejoin="round"/>
+
+    <!-- daikon chunk, big left-center -->
+    <path d="M276 236 C274 212 296 196 328 198 C360 200 376 216 374 240 C372 264 348 278 318 276 C290 274 278 260 276 236 Z" fill="#FBF7EC"/>
+    <path d="M352 206 C368 216 372 238 362 256 C352 272 334 278 318 276 C348 278 372 264 374 240 C375 226 366 212 352 206 Z" fill="#E9E2D0"/>
+    <path d="M292 220 C306 210 330 208 346 214" stroke="#FFFFFF" stroke-width="7" fill="none" stroke-linecap="round" opacity=".9"/>
+    <g stroke="#DED4BE" stroke-width="3.4" stroke-linecap="round" fill="none" opacity=".85">
+      <path d="M288 246 C306 240 330 240 350 246"/>
+      <path d="M296 262 C312 256 334 256 352 262"/>
+    </g>
+    <path d="M276 236 C274 212 296 196 328 198 C360 200 376 216 374 240 C372 264 348 278 318 276 C290 274 278 260 276 236 Z" fill="none" stroke="#C4B698" stroke-width="3.8" stroke-linejoin="round"/>
+
+    <!-- pork rib with meat, center back -->
+    <path d="M382 212 C376 188 392 170 418 168 C446 166 466 180 468 202 C470 224 452 238 426 238 C402 238 386 230 382 212 Z" fill="#DF9A90"/>
+    <path d="M446 176 C462 186 466 208 454 226 C444 240 430 240 420 238 C448 238 468 224 468 202 C468 190 460 180 446 176 Z" fill="#C97D74"/>
+    <g stroke="#F3CFC8" stroke-width="4" stroke-linecap="round" fill="none" opacity=".75">
+      <path d="M394 198 C408 190 428 188 442 194"/>
+      <path d="M398 218 C412 212 432 212 446 218"/>
+    </g>
+    <path d="M382 212 C376 188 392 170 418 168 C446 166 466 180 468 202 C470 224 452 238 426 238 C402 238 386 230 382 212 Z" fill="none" stroke="#B2665E" stroke-width="3.6" stroke-linejoin="round"/>
+    <path d="M414 190 C400 190 394 198 398 208 C402 218 416 222 430 218 C444 214 448 202 442 192 C436 184 426 188 414 190 Z" fill="#F8F2E3" stroke="#C9BDA2" stroke-width="3.2"/>
+    <ellipse cx="422" cy="204" rx="14" ry="10" fill="#E8D8BC"/>
+    <ellipse cx="420" cy="203" rx="7" ry="5" fill="#D8BE9E"/>
+
+    <!-- corn round, left front -->
+    <circle cx="268" cy="300" r="40" fill="url(#kern)"/>
+    <circle cx="268" cy="300" r="40" fill="none" stroke="#BE801F" stroke-width="3.8"/>
+    <circle cx="268" cy="300" r="15" fill="#F6E6B4" stroke="#C9A450" stroke-width="3"/>
+    <path d="M240 278 C250 266 268 262 282 266" stroke="#FFF0BC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".7"/>
+
+    <!-- corn cob segment, right -->
+    <path d="M498 222 C498 202 516 192 540 194 C566 196 582 208 580 228 C578 250 558 262 532 260 C508 258 498 244 498 222 Z" fill="url(#kern)"/>
+    <path d="M498 222 C498 202 516 192 540 194 C566 196 582 208 580 228 C578 250 558 262 532 260 C508 258 498 244 498 222 Z" fill="none" stroke="#BE801F" stroke-width="3.8" stroke-linejoin="round"/>
+    <path d="M510 208 C524 198 546 198 562 204" stroke="#FFF0BC" stroke-width="6" fill="none" stroke-linecap="round" opacity=".65"/>
+
+    <!-- daikon chunk, right front -->
+    <path d="M430 286 C430 266 450 254 476 256 C502 258 516 272 514 292 C512 312 490 322 464 320 C440 318 430 306 430 286 Z" fill="#FAF6EB"/>
+    <path d="M492 264 C506 274 510 294 498 308 C488 318 474 320 464 320 C490 322 512 312 514 292 C515 280 504 268 492 264 Z" fill="#E7E0CE"/>
+    <g stroke="#DED4BE" stroke-width="3.2" stroke-linecap="round" fill="none" opacity=".85">
+      <path d="M440 294 C456 288 478 288 496 294"/>
+      <path d="M446 308 C460 303 480 303 496 308"/>
+    </g>
+    <path d="M430 286 C430 266 450 254 476 256 C502 258 516 272 514 292 C512 312 490 322 464 320 C440 318 430 306 430 286 Z" fill="none" stroke="#C4B698" stroke-width="3.6" stroke-linejoin="round"/>
+
+    <!-- baby cabbage leaf, right -->
+    <path d="M556 268 C572 250 600 250 610 266 C620 282 610 302 590 306 C570 310 550 292 556 268 Z" fill="#EDEFC4"/>
+    <path d="M600 258 C610 270 608 292 590 302 C606 302 620 288 616 272 C613 262 607 257 600 258 Z" fill="#D7DCA6"/>
+    <path d="M562 274 C578 268 596 268 610 274" stroke="#C3CB8E" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M556 268 C572 250 600 250 610 266 C620 282 610 302 590 306 C570 310 550 292 556 268 Z" fill="none" stroke="#A9B277" stroke-width="3.4" stroke-linejoin="round"/>
+
+    <!-- jujube -->
+    <g transform="rotate(-16 344 302)">
+      <path d="M322 302 C322 282 332 270 346 270 C360 270 370 282 370 302 C370 324 360 336 346 336 C332 336 322 324 322 302 Z" fill="#A83E2D"/>
+      <path d="M358 274 C368 288 368 318 354 334 C364 330 370 318 370 302 C370 286 366 277 358 274 Z" fill="#7E2A1E"/>
+      <path d="M332 282 C328 296 329 314 336 328" stroke="#C9604A" stroke-width="3" fill="none" stroke-linecap="round" opacity=".8"/>
+      <path d="M322 302 C322 282 332 270 346 270 C360 270 370 282 370 302 C370 324 360 336 346 336 C332 336 322 324 322 302 Z" fill="none" stroke="#6E2317" stroke-width="3.4"/>
+    </g>
+    <g transform="rotate(12 584 216)">
+      <path d="M566 216 C566 200 574 190 586 190 C598 190 606 200 606 216 C606 234 598 244 586 244 C574 244 566 234 566 216 Z" fill="#B14433"/>
+      <path d="M596 194 C604 206 604 230 592 242 C601 239 606 229 606 216 C606 203 602 196 596 194 Z" fill="#88301F"/>
+      <path d="M574 198 C571 210 572 226 578 238" stroke="#D0694F" stroke-width="2.8" fill="none" stroke-linecap="round" opacity=".8"/>
+      <path d="M566 216 C566 200 574 190 586 190 C598 190 606 200 606 216 C606 234 598 244 586 244 C574 244 566 234 566 216 Z" fill="none" stroke="#6E2317" stroke-width="3.2"/>
+    </g>
+
+    <!-- ginger slice -->
+    <g transform="translate(348 192) rotate(-8)">
+      <path d="M-36 0 C-36 -16 -18 -26 2 -26 C22 -26 36 -14 36 2 C36 18 18 26 -2 25 C-22 24 -36 16 -36 0 Z" fill="#F0DBA8"/>
+      <path d="M20 -22 C32 -12 32 14 16 24 C28 22 36 12 36 2 C36 -10 30 -19 20 -22 Z" fill="#DEC48A"/>
+      <path d="M-36 0 C-36 -16 -18 -26 2 -26 C22 -26 36 -14 36 2 C36 18 18 26 -2 25 C-22 24 -36 16 -36 0 Z" fill="none" stroke="#B89355" stroke-width="3.2" stroke-linejoin="round"/>
+    </g>
+
+    <!-- goji berries floating -->
+    <use href="#goji" transform="translate(238 268) rotate(-24)"/>
+    <use href="#goji" transform="translate(396 268) rotate(14)"/>
+    <use href="#goji" transform="translate(472 236) rotate(-10)"/>
+    <use href="#goji" transform="translate(538 288) rotate(26)"/>
+    <use href="#goji" transform="translate(308 180) rotate(-34)"/>
+    <use href="#goji" transform="translate(608 234) rotate(8)"/>
+  </g>
+
+  <!-- side spoon + stray goji on the table -->
+  <g filter="url(#roughS)">
+    <path d="M648 404 C676 392 712 398 724 416 C734 432 718 448 694 448 C668 448 646 432 648 414 Z" fill="#F5EDE0" stroke="#BCA183" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M700 404 C716 410 722 424 714 436 C726 432 732 420 724 410 C718 403 708 401 700 404 Z" fill="#E7DAC6"/>
+    <path d="M724 420 C752 424 772 430 786 438" stroke="#BCA183" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M724 420 C752 424 772 430 786 438" stroke="#F5EDE0" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <use href="#goji" transform="translate(120 430) rotate(-20)"/>
+    <use href="#goji" transform="translate(146 448) rotate(34)"/>
+  </g>
+
+  <g filter="url(#grain)" style="mix-blend-mode:multiply" opacity=".4">
+    <path d="M164 250 C170 364 250 456 400 456 C550 456 630 364 636 250 Z" fill="#8a7357"/>
+    <ellipse cx="400" cy="252" rx="222" ry="66" fill="#9c7230"/>
+  </g>
+</svg>

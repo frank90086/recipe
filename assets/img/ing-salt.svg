@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="鹽插畫">
+  <defs>
+    <filter id="r" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="51" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="g" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="21" result="t"/>
+      <feColorMatrix in="t" type="saturate" values="0" result="d"/>
+      <feComponentTransfer in="d" result="a"><feFuncA type="table" tableValues="0 0.42"/></feComponentTransfer>
+      <feComposite in="a" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#r)">
+    <path d="M30 86 C30 78 48 72 80 72 C112 72 130 78 130 86 C130 102 112 118 80 118 C48 118 30 102 30 86 Z" fill="#E6DAC6"/>
+    <path d="M34 94 C46 112 114 112 126 94 C128 100 124 110 112 115 C96 121 64 121 48 115 C36 110 32 100 34 94 Z" fill="#CBBCA2"/>
+    <path d="M30 86 C30 78 48 72 80 72 C112 72 130 78 130 86 C130 102 112 118 80 118 C48 118 30 102 30 86 Z" fill="none" stroke="#A8976F" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M44 80 C52 58 66 44 80 42 C94 44 108 58 116 80 C104 86 56 86 44 80 Z" fill="#FCFAF3"/>
+    <path d="M86 44 C98 52 110 66 116 80 C108 84 96 85 86 85 C92 72 92 56 86 44 Z" fill="#EDE8DA"/>
+    <path d="M44 80 C52 58 66 44 80 42 C94 44 108 58 116 80 C104 86 56 86 44 80 Z" fill="none" stroke="#C8BEA4" stroke-width="2.4" stroke-linejoin="round"/>
+    <g fill="#FFFFFF" stroke="#C8BEA4" stroke-width="1.6">
+      <rect x="36" y="46" width="9" height="9" rx="1.6" transform="rotate(-18 40 50)"/>
+      <rect x="116" y="52" width="8" height="8" rx="1.6" transform="rotate(14 120 56)"/>
+      <rect x="104" y="36" width="7" height="7" rx="1.4" transform="rotate(-24 107 39)"/>
+      <rect x="54" y="30" width="7.5" height="7.5" rx="1.4" transform="rotate(26 57 33)"/>
+      <rect x="126" y="92" width="7" height="7" rx="1.4" transform="rotate(-10 129 95)"/>
+      <rect x="26" y="100" width="7" height="7" rx="1.4" transform="rotate(18 29 103)"/>
+    </g>
+  </g>
+  <g filter="url(#g)" style="mix-blend-mode:multiply" opacity=".4">
+    <path d="M30 86 C30 78 48 72 80 72 C112 72 130 78 130 86 C130 102 112 118 80 118 C48 118 30 102 30 86 Z" fill="#8c8068"/>
+    <path d="M44 80 C52 58 66 44 80 42 C94 44 108 58 116 80 C104 86 56 86 44 80 Z" fill="#9c927c"/>
+  </g>
+</svg>

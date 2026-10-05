@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="豬軟骨插畫">
+  <defs>
+    <filter id="r" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="3" seed="31" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="4.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="g" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="17" result="t"/>
+      <feColorMatrix in="t" type="saturate" values="0" result="d"/>
+      <feComponentTransfer in="d" result="a"><feFuncA type="table" tableValues="0 0.5"/></feComponentTransfer>
+      <feComposite in="a" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#r)">
+    <g>
+      <path d="M30 54 C30 42 42 36 58 38 C74 40 84 48 84 60 C84 72 72 78 56 77 C40 76 30 68 30 54 Z" fill="#E09A90"/>
+      <path d="M34 66 C44 76 70 78 80 68 C86 62 86 54 84 50 C82 62 72 70 58 71 C46 72 38 70 34 66 Z" fill="#CB7C74" opacity=".9"/>
+      <path d="M30 54 C30 42 42 36 58 38 C74 40 84 48 84 60 C84 72 72 78 56 77 C40 76 30 68 30 54 Z" fill="none" stroke="#B2665E" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M78 44 C92 42 104 48 104 58 C104 70 90 76 78 72 C86 66 88 52 78 44 Z" fill="#F3EFE4" stroke="#CBBFA6" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M84 50 C92 52 96 58 94 64" stroke="#DED2B8" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    </g>
+    <g transform="translate(14 52) rotate(14 60 40)">
+      <path d="M30 54 C30 42 42 36 58 38 C74 40 84 48 84 60 C84 72 72 78 56 77 C40 76 30 68 30 54 Z" fill="#DE9289"/>
+      <path d="M34 66 C44 76 70 78 80 68 C86 62 86 54 84 50 C82 62 72 70 58 71 C46 72 38 70 34 66 Z" fill="#C7756D" opacity=".9"/>
+      <path d="M30 54 C30 42 42 36 58 38 C74 40 84 48 84 60 C84 72 72 78 56 77 C40 76 30 68 30 54 Z" fill="none" stroke="#B2665E" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M78 44 C92 42 104 48 104 58 C104 70 90 76 78 72 C86 66 88 52 78 44 Z" fill="#F6F2E8" stroke="#CBBFA6" stroke-width="2.4" stroke-linejoin="round"/>
+      <path d="M84 50 C92 52 96 58 94 64" stroke="#DED2B8" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    </g>
+    <g stroke="#F3CFC8" stroke-width="2.6" stroke-linecap="round" fill="none" opacity=".7">
+      <path d="M40 52 C48 48 58 48 66 52"/>
+      <path d="M52 104 C60 100 70 100 78 104"/>
+    </g>
+  </g>
+  <g filter="url(#g)" style="mix-blend-mode:multiply" opacity=".45">
+    <path d="M30 54 C30 42 42 36 58 38 C74 40 84 48 84 60 C84 72 72 78 56 77 C40 76 30 68 30 54 Z" fill="#8c5a54"/>
+    <path d="M44 106 C44 94 56 88 72 90 C88 92 98 100 98 112 C98 124 86 130 70 129 C54 128 44 120 44 106 Z" fill="#8c5a54"/>
+  </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="白蘿蔔插畫">
+  <defs>
+    <filter id="r" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="3" seed="12" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="g" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="4" result="t"/>
+      <feColorMatrix in="t" type="saturate" values="0" result="d"/>
+      <feComponentTransfer in="d" result="a"><feFuncA type="table" tableValues="0 0.5"/></feComponentTransfer>
+      <feComposite in="a" in2="SourceGraphic" operator="in"/>
+    </filter>
+    <clipPath id="body">
+      <path d="M57 54 C54 86 63 114 76 138 C80 146 84 151 86 153 C92 143 100 121 103 99 C106 75 104 61 101 52 C86 45 70 46 57 54 Z"/>
+    </clipPath>
+  </defs>
+  <g filter="url(#r)">
+    <path d="M76 44 C64 28 50 20 36 18 C44 32 58 42 72 48 Z" fill="#7E9A4E"/>
+    <path d="M86 42 C96 24 110 16 124 16 C116 32 102 42 88 47 Z" fill="#91AB59"/>
+    <path d="M80 42 C78 28 80 14 84 4 C92 16 92 30 87 44 Z" fill="#6B8B42"/>
+    <path d="M57 54 C54 86 63 114 76 138 C80 146 84 151 86 153 C92 143 100 121 103 99 C106 75 104 61 101 52 C86 45 70 46 57 54 Z" fill="#F7F2E7"/>
+    <g clip-path="url(#body)">
+      <path d="M90 48 C98 70 99 98 92 122 C88 138 86 148 85 154 L106 150 L108 46 Z" fill="#E6DECC"/>
+      <path d="M57 50 C70 43 88 42 102 50 C102 58 101 62 100 64 C84 57 70 58 58 64 Z" fill="#CCDAA6"/>
+      <g stroke="#DACFB8" stroke-width="2" stroke-linecap="round" fill="none" opacity=".9">
+        <path d="M61 74 C72 70 86 70 99 75"/>
+        <path d="M63 88 C73 84 86 84 99 89"/>
+        <path d="M66 102 C75 98 87 99 97 103"/>
+        <path d="M71 118 C78 114 88 115 94 118"/>
+      </g>
+      <path d="M62 56 C66 86 70 112 80 138" stroke="#FFFDF6" stroke-width="5" stroke-linecap="round" fill="none" opacity=".8"/>
+    </g>
+    <path d="M57 54 C54 86 63 114 76 138 C80 146 84 151 86 153 C92 143 100 121 103 99 C106 75 104 61 101 52 C86 45 70 46 57 54 Z" fill="none" stroke="#B9A88B" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M36 18 C44 32 58 42 72 48 M124 16 C116 32 102 42 88 47 M84 4 C92 16 92 30 87 44" fill="none" stroke="#5E7C38" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#g)" style="mix-blend-mode:multiply" opacity=".5">
+    <path d="M57 54 C54 86 63 114 76 138 C80 146 84 151 86 153 C92 143 100 121 103 99 C106 75 104 61 101 52 C86 45 70 46 57 54 Z" fill="#8a7a62"/>
+    <path d="M76 44 C64 28 50 20 36 18 C44 32 58 42 72 48 Z M86 42 C96 24 110 16 124 16 C116 32 102 42 88 47 Z" fill="#4e6a2c"/>
+  </g>
+</svg>

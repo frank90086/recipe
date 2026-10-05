@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="枸杞插畫">
+  <defs>
+    <filter id="r" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.06" numOctaves="3" seed="33" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="g" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="3" seed="11" result="t"/>
+      <feColorMatrix in="t" type="saturate" values="0" result="d"/>
+      <feComponentTransfer in="d" result="a"><feFuncA type="table" tableValues="0 0.45"/></feComponentTransfer>
+      <feComposite in="a" in2="SourceGraphic" operator="in"/>
+    </filter>
+    <g id="berry">
+      <path d="M0 -20 C7 -20 11 -12 11 0 C11 13 6 20 0 20 C-6 20 -11 13 -11 0 C-11 -12 -7 -20 0 -20 Z" fill="#DE5A2A"/>
+      <path d="M5 -18 C10 -10 10 10 4 19 C9 17 11 9 11 0 C11 -10 9 -16 5 -18 Z" fill="#B23F18"/>
+      <path d="M-4 -14 C-7 -6 -7 6 -4 14" stroke="#F0945E" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+      <path d="M0 -20 C7 -20 11 -12 11 0 C11 13 6 20 0 20 C-6 20 -11 13 -11 0 C-11 -12 -7 -20 0 -20 Z" fill="none" stroke="#9A3412" stroke-width="2.2"/>
+    </g>
+  </defs>
+  <g filter="url(#r)">
+    <use href="#berry" transform="translate(56 58) rotate(-24)"/>
+    <use href="#berry" transform="translate(98 52) rotate(16)"/>
+    <use href="#berry" transform="translate(76 94) rotate(-6)"/>
+    <use href="#berry" transform="translate(40 104) rotate(34)" opacity=".97"/>
+    <use href="#berry" transform="translate(114 98) rotate(-32)"/>
+    <g stroke="#7E9A4E" stroke-width="2.6" stroke-linecap="round" fill="none">
+      <path d="M56 38 C54 32 52 28 48 26"/>
+      <path d="M98 32 C100 26 104 22 108 20"/>
+    </g>
+  </g>
+  <g filter="url(#g)" style="mix-blend-mode:multiply" opacity=".45">
+    <ellipse cx="56" cy="58" rx="12" ry="20" fill="#8a3010"/>
+    <ellipse cx="98" cy="52" rx="12" ry="20" fill="#8a3010"/>
+    <ellipse cx="76" cy="94" rx="12" ry="20" fill="#8a3010"/>
+    <ellipse cx="40" cy="104" rx="12" ry="20" fill="#8a3010"/>
+    <ellipse cx="114" cy="98" rx="12" ry="20" fill="#8a3010"/>
+  </g>
+</svg>

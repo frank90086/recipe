@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>食譜｜暖食手記</title>
+<meta name="description" content="食譜詳細頁：人數換算與步驟倒數計時器。">
+<meta name="theme-color" content="#EDE0CF">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <span class="brand-mark"><img src="assets/img/favicon.svg" alt=""></span>
+    <span><b>暖食手記</b><small>WARM KITCHEN NOTES</small></span>
+  </a>
+  <div class="topbar-actions">
+    <button type="button" class="nm-btn" onclick="window.print()">列印</button>
+    <button type="button" class="nm-btn icon" id="themeToggle" aria-label="切換深色模式">☾</button>
+  </div>
+</header>
+
+<main>
+  <a class="nm-btn crumb" href="index.html">← 回到食譜總覽</a>
+
+  <div class="empty" id="notFound" hidden>
+    <strong>找不到這道食譜</strong>
+    網址裡的編號可能有誤。
+    <div style="margin-top:1.2rem"><a class="nm-btn" href="index.html">回到總覽</a></div>
+  </div>
+
+  <article id="recipeRoot">
+
+    <section class="detail-hero">
+      <div>
+        <h1 id="rName"></h1>
+        <p class="lede" id="rLede"></p>
+        <div class="meta-row" id="rMeta"></div>
+        <div class="meta-row" id="rTags" style="margin-top:.6rem"></div>
+      </div>
+      <div class="hero-art">
+        <img id="rImage" src="" alt="">
+      </div>
+    </section>
+
+    <div class="columns">
+
+      <div class="col-side">
+
+        <section class="panel" aria-labelledby="servingHead">
+          <h2 id="servingHead">👥 要煮幾人份？</h2>
+          <div class="stepper">
+            <button type="button" class="nm-btn" id="minus" aria-label="減少一人份">−</button>
+            <span class="stepper-value">
+              <b id="servingValue" aria-live="polite">6</b>
+              <span>人份</span>
+            </span>
+            <button type="button" class="nm-btn" id="plus" aria-label="增加一人份">＋</button>
+          </div>
+          <div class="presets" id="presets" role="group" aria-label="常用人數">
+            <button type="button" class="chip" data-preset="2">2 人</button>
+            <button type="button" class="chip" data-preset="4">4 人</button>
+            <button type="button" class="chip" data-preset="6">6 人</button>
+            <button type="button" class="chip" data-preset="8">8 人</button>
+            <button type="button" class="chip" data-preset="10">10 人</button>
+          </div>
+          <p class="scale-hint" id="scaleHint"></p>
+          <p class="scale-hint" id="rServingDetail" style="border-top:0;padding-top:0;margin-top:.5rem"></p>
+        </section>
+
+        <section class="panel" aria-labelledby="ingHead">
+          <h2 id="ingHead">🧺 食材</h2>
+          <div id="ingredients"></div>
+          <div class="ing-actions">
+            <button type="button" class="nm-btn" id="copyList">複製食材清單</button>
+            <button type="button" class="nm-btn" id="resetChecks">清除勾選</button>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="col-main">
+
+        <section class="panel" aria-labelledby="stepHead" style="margin-bottom:1.4rem">
+          <div class="steps-head">
+            <h2 id="stepHead">🍳 作法</h2>
+            <div class="progress-wrap">
+              <div class="progress-label" id="progressLabel"></div>
+              <div class="progress-track"><div class="progress-bar" id="progressBar"></div></div>
+            </div>
+          </div>
+          <ol class="steps" id="steps"></ol>
+        </section>
+
+        <section class="panel" aria-labelledby="noteHead" style="margin-bottom:1.4rem">
+          <h2 id="noteHead">📝 筆記</h2>
+          <ul class="notes" id="notes"></ul>
+        </section>
+
+        <section class="panel" aria-labelledby="artHead">
+          <h2 id="artHead">🖍 食材插畫</h2>
+          <div class="art-wall" id="artWall"></div>
+        </section>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+<div class="mini-timer" id="miniTimer" role="status" aria-live="off">
+  <span class="dot" aria-hidden="true"></span>
+  <span class="mt-text" id="miniText"></span>
+  <button type="button" class="nm-btn" id="miniJump">看步驟</button>
+</div>
+
+<footer class="site-foot">
+  暖食手記 · 自家廚房的筆記 · 插畫與版面皆為手繪 SVG
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/common.js"></script>
+<script src="assets/js/recipe.js"></script>
+</body>
+</html>

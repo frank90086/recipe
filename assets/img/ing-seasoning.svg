@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="鮮味調味粉插畫">
+  <defs>
+    <filter id="r" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="61" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="g" x="-25%" y="-25%" width="150%" height="150%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="25" result="t"/>
+      <feColorMatrix in="t" type="saturate" values="0" result="d"/>
+      <feComponentTransfer in="d" result="a"><feFuncA type="table" tableValues="0 0.45"/></feComponentTransfer>
+      <feComposite in="a" in2="SourceGraphic" operator="in"/>
+    </filter>
+  </defs>
+  <g filter="url(#r)">
+    <path d="M48 44 C48 38 54 34 80 34 C106 34 112 38 112 44 L110 128 C110 136 98 140 80 140 C62 140 50 136 50 128 Z" fill="#F2E6CF"/>
+    <path d="M94 36 C100 60 100 112 92 138 C104 136 110 132 110 128 L112 44 C112 39 106 36 94 36 Z" fill="#DDCDB0"/>
+    <path d="M48 44 C48 38 54 34 80 34 C106 34 112 38 112 44 L110 128 C110 136 98 140 80 140 C62 140 50 136 50 128 Z" fill="none" stroke="#B9A782" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M52 62 C52 58 62 56 80 56 C98 56 108 58 108 62 L107 104 C107 108 96 110 80 110 C64 110 53 108 53 104 Z" fill="#D4663E"/>
+    <path d="M96 57 C100 72 100 96 95 109 C103 108 107 106 107 104 L108 62 C108 59 104 58 96 57 Z" fill="#B5502C"/>
+    <path d="M52 62 C52 58 62 56 80 56 C98 56 108 58 108 62 L107 104 C107 108 96 110 80 110 C64 110 53 108 53 104 Z" fill="none" stroke="#9C4523" stroke-width="2.2" stroke-linejoin="round"/>
+    <g fill="#FBF3E2" opacity=".95">
+      <ellipse cx="70" cy="74" rx="9" ry="9"/>
+      <ellipse cx="88" cy="88" rx="6.5" ry="6.5"/>
+      <path d="M62 94 C70 90 80 90 88 94 C80 100 70 100 62 94 Z"/>
+    </g>
+    <path d="M44 32 C44 24 56 20 80 20 C104 20 116 24 116 32 C116 38 104 42 80 42 C56 42 44 38 44 32 Z" fill="#E8D8BB" stroke="#B9A782" stroke-width="2.6"/>
+    <path d="M52 28 C62 24 98 24 108 28" stroke="#FBF3E2" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".85"/>
+    <g stroke="#C8B894" stroke-width="2" stroke-linecap="round" fill="none" opacity=".7">
+      <path d="M58 118 C68 122 92 122 102 118"/>
+    </g>
+  </g>
+  <g filter="url(#g)" style="mix-blend-mode:multiply" opacity=".4">
+    <path d="M48 44 C48 38 54 34 80 34 C106 34 112 38 112 44 L110 128 C110 136 98 140 80 140 C62 140 50 136 50 128 Z" fill="#8c8068"/>
+    <path d="M52 62 C52 58 62 56 80 56 C98 56 108 58 108 62 L107 104 C107 108 96 110 80 110 C64 110 53 108 53 104 Z" fill="#8c3c1e"/>
+  </g>
+</svg>
