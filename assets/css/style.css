@@ -222,6 +222,16 @@ main { max-width: var(--maxw); margin: 0 auto; padding: clamp(1.4rem, 4vw, 3rem)
 .search-box input::placeholder { color: var(--text-faint); }
 .search-box input:focus { outline: none; }
 .search-box input::-webkit-search-cancel-button { display: none; }
+.kbd-hint {
+  flex: none;
+  font: inherit;
+  font-size: .78rem;
+  color: var(--text-faint);
+  padding: .1em .6em;
+  margin-right: .4rem;
+  border-radius: 8px;
+  box-shadow: var(--nm-sm);
+}
 
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
 .chips .label { font-size: .8rem; color: var(--text-faint); margin-right: .2rem; }
@@ -246,7 +256,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: clamp(1.4rem, 4vw, 3rem)
 /* ---------- 食譜卡片 ---------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(282px, 100%), 1fr));
   gap: clamp(1.1rem, 2.5vw, 1.8rem);
 }
 .card {
@@ -475,7 +485,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: clamp(1.4rem, 4vw, 3rem)
 }
 
 /* 食材插畫牆 */
-.art-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: .9rem; }
+.art-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(104px, 46%), 1fr)); gap: .9rem; }
 .art-wall figure { margin: 0; text-align: center; }
 .art-wall .frame { border-radius: var(--r); background: var(--bg-deep); box-shadow: var(--nm-in-sm); padding: .5rem; }
 .art-wall figcaption { font-size: .78rem; color: var(--text-soft); margin-top: .45rem; }
@@ -484,7 +494,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: clamp(1.4rem, 4vw, 3rem)
 .mini-timer {
   position: fixed;
   left: 50%;
-  bottom: 1.2rem;
+  bottom: calc(1.2rem + env(safe-area-inset-bottom, 0px));
   transform: translate(-50%, 140%);
   z-index: 60;
   display: flex;
@@ -527,14 +537,88 @@ main { max-width: var(--maxw); margin: 0 auto; padding: clamp(1.4rem, 4vw, 3rem)
   .columns { grid-template-columns: 1fr; }
   .col-side { position: static; }
 }
+
+/* 平板以下：hero 改單欄，手機閱讀順序為 標題 → 插圖 → 說明 → 標籤 */
 @media (max-width: 760px) {
-  .hero, .detail-hero { grid-template-columns: 1fr; }
-  .hero-art, .detail-hero .hero-art { order: -1; }
+  html { scroll-padding-top: 76px; }
+
+  .topbar { padding: .7rem 1rem; gap: .6rem; }
   .brand small { display: none; }
+  .brand-mark { width: 40px; height: 40px; }
+  .brand b { font-size: 1.02rem; }
+  .nm-btn.compact { padding: .5em .9em; font-size: .85rem; }
+
+  main { padding: 1.2rem 1rem 5rem; }
+
+  .hero, .detail-hero {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.2rem 1.1rem 1.4rem;
+    border-radius: var(--r);
+  }
+  .hero-copy { display: contents; }
+  .hero h1, .detail-hero h1 { order: 1; font-size: clamp(1.45rem, 6.4vw, 1.9rem); }
+  .hero-art { order: 2; padding: .45rem; }
+  .hero p, .detail-hero .lede { order: 3; margin: 0; max-width: none; font-size: .92rem; }
+  .hero-tags, .detail-hero .meta-row { order: 4; }
+  .detail-hero #rTags { order: 5; margin-top: 0 !important; }
+  .hero-art img { aspect-ratio: 3 / 2; object-fit: cover; }
+
+  .section-title { font-size: 1.1rem; }
+  .crumb { margin-bottom: .9rem; }
+
+  /* 觸控目標放大到 44px 上下 */
+  .chip { padding: .7em 1.1em; font-size: .86rem; }
+  .pill { font-size: .78rem; padding: .32em .8em; }
+  .search-box { padding: .5rem .55rem .5rem 1.1rem; }
+  .kbd-hint { display: none; }
+
+  .panel { padding: 1.1rem 1rem; border-radius: var(--r); }
+  .card { border-radius: var(--r); }
+
+  .steps-head { gap: .7rem; }
+  .step { padding: 1rem .95rem; border-radius: var(--r); }
+  .step-head { gap: .6rem; }
+  .step-no { width: 36px; height: 36px; font-size: 1rem; }
+  .step-title { font-size: 1.06rem; }
+  .step-head { flex-wrap: wrap; }
+  .step-check .nm-btn { font-size: .78rem; padding: .42em .8em; }
+
+  .timer { padding: .8rem; gap: .7rem .8rem; }
   .timer-ring { width: 78px; height: 78px; }
-  .mini-timer { left: 1rem; right: 1rem; transform: translateY(140%); max-width: none; }
-  .mini-timer.show { transform: translateY(0); }
   .timer-readout { font-size: 1.05rem; }
+  .timer-main { display: contents; }
+  .timer-label { flex: 1; min-width: 110px; }
+  .timer-note { flex-basis: 100%; margin: 0; }
+  .timer-controls { flex-basis: 100%; gap: .45rem; }
+  .timer-controls .nm-btn {
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: .82rem;
+    padding: .58em .5em;
+  }
+
+  .mini-timer {
+    left: .8rem; right: .8rem;
+    max-width: none;
+    transform: translateY(160%);
+    padding: .55rem .6rem .55rem 1rem;
+  }
+  .mini-timer.show { transform: translateY(0); }
+}
+
+/* 小螢幕（iPhone SE 等） */
+@media (max-width: 400px) {
+  .ing { grid-template-columns: 38px 1fr auto; gap: .6rem; padding: .45rem .7rem .45rem .5rem; }
+  .ing-thumb { width: 38px; height: 38px; }
+  .ing-name { font-size: .9rem; }
+  .ing-qty { font-size: .9rem; }
+  .stepper button { width: 40px; height: 40px; }
+  .stepper-value b { font-size: 1.5rem; }
+  .presets .chip { flex: 1; justify-content: center; text-align: center; }
+  .art-wall { gap: .7rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
